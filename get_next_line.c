@@ -6,7 +6,7 @@
 /*   By: idemchen <idemchen@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2016/12/10 20:42:49 by idemchen          #+#    #+#             */
-/*   Updated: 2017/01/06 19:19:19 by idemchen         ###   ########.fr       */
+/*   Updated: 2017/05/17 15:46:35 by idemchen         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -85,7 +85,7 @@ static int			gnl(char *current[4096][3], char buffer[], const int fd)
 		if (ft_strchr(buffer, '\n'))
 			break ;
 	}
-	if (buf < BUFF_SIZE && !ft_strlen(current[fd][0]))
+	if (buf < BUFF_SIZE && (current[fd][0] || !ft_strlen(current[fd][0])))
 		return (0);
 	return (1);
 }
@@ -98,7 +98,7 @@ int					get_next_line(const int fd, char **line)
 	int				ret;
 
 	flag = 0;
-	if ((fd < 0 || line == NULL || read(fd, buffer, 0) < 0)
+	if ((fd < 0 || *line == NULL || read(fd, buffer, 0) < 0)
 			|| !(*line = ft_strnew(1)))
 		return (-1);
 	if (!file[fd][0])
