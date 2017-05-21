@@ -3,4 +3,6 @@ Modification of getline function. Function reads and modifies a pointer on line 
 
 <div align="center"><img src ="https://s.dou.ua/img/announces/binary-studio-academy-img.png" /></div>
 <div align="center">
-<span style="color:orange;">Binary studio first homework. Involving .git technology</span>
+- ![#1589F0](https://placehold.it/15/1589F0/000000?text=+) `#1589F0`
+Binary studio first homework. Involving .git technology
+</div>
